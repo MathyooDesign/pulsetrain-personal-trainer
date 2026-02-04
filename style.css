@@ -1,0 +1,44 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f1f5f9;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.kanban-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 1.25rem;
+  padding-bottom: 2rem;
+  scroll-snap-type: x mandatory;
+}
+.kanban-column {
+  width: 300px;
+  flex-shrink: 0;
+  min-height: 500px;
+  scroll-snap-align: start;
+}
+.exercise-card.completed {
+  opacity: 0.6;
+  background-color: #ecfdf5 !important;
+  border-color: #10b981 !important;
+}
+.exercise-card.completed .ex-name {
+  text-decoration: line-through;
+}
+.gradient-header {
+  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+}
+.custom-scrollbar::-webkit-scrollbar {
+  height: 8px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 10px;
+}
+.column-handle {
+  cursor: grab;
+}
+main {
+  flex: 1;
+}
